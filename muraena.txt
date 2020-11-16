@@ -1,0 +1,27 @@
+go get github.com/muraenateam/muraena
+
+cd $GOPATH/src/github.com/muraenateam/muraena
+
+make build
+
+
+
+____
+
+sudo printf "deb http://deb.debian.org/debian stretch-backports main contrib non-free\n" | sudo tee -a /etc/apt/sources.list > /dev/null
+sudo printf "deb-src http://deb.debian.org/debian stretch-backports main contrib non-free" | sudo tee -a /etc/apt/sources.list > /dev/null
+sudo apt update && sudo apt install -y python-certbot-nginx -t stretch-backports
+sudo apt install --only-upgrade python3-acme
+____
+wget https://dl.eff.org/certbot-auto
+
+sudo mv certbot-auto /usr/local/bin/certbot-auto
+
+sudo chown root /usr/local/bin/certbot-auto
+
+chmod 0755 /usr/local/bin/certbot-auto
+
+sudo chmod 0755 /usr/local/bin/certbot-auto
+
+
+certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual --preferred-challenges dns -d '*.redvsblue.team'

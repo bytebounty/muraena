@@ -89,9 +89,9 @@
   "tls": {
     "enabled": true,
     "expand": false,
-    "certificate": "./config/cert.pem",
-    "key": "./config/privkey.pem",
-    "root": "./config/fullchain.pem"
+    "certificate": "./etc/letsencrypt/live/trdtransporte.com/cert.pem",
+    "key": "./etc/letsencrypt/live/trdtransporte.com/privkey.pem",
+    "root": "./etc/letsencrypt/live/trdtransporte.com/fullchain.pem"
   },
   "crawler": {
     "enabled": false,
